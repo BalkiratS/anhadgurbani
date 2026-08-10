@@ -199,8 +199,7 @@
 
       if (isIOS) {
         document.getElementById('android-section').classList.add('hidden');
-        msg.classList.remove('hidden');
-        setTimeout(function () { window.location.href = appleBtn.href; }, 1500);
+        window.location.href = appleBtn.href;
       } else if (isAndroid) {
         appleBtn.classList.add('hidden');
       }
