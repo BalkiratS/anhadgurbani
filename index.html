@@ -206,7 +206,8 @@
     </div>
     <p id="redirect-msg" class="redirecting hidden">Redirecting you to the store...</p>
     <div id="inapp-msg" class="open-browser-msg hidden">
-      <p>Tap <span class="highlight">⋯</span> or <span class="highlight">ᐧᐧᐧ</span> at the top, then <span class="highlight">"Open in Browser"</span> to download</p>
+      <p>Tap <span class="highlight">⋯</span> or <span class="highlight">ᐧᐧᐧ</span> at the top, then <span
+          class="highlight">"Open in Browser"</span> to download</p>
     </div>
   </div>
 
@@ -215,6 +216,7 @@
       var ua = navigator.userAgent || navigator.vendor || window.opera;
       var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       var isAndroid = /android/i.test(ua);
+      var isInstagram = /Instagram/i.test(ua);
       var isInAppBrowser = /Instagram|FBAN|FBAV|Twitter|Line/i.test(ua);
 
       var appleBtn = document.getElementById('apple-btn');
@@ -222,14 +224,22 @@
 
       if (isIOS) {
         document.getElementById('android-section').classList.add('hidden');
-        if (isInAppBrowser) {
+        if (isInstagram) {
+          // Force Instagram to open in external browser (Safari)
+          window.location.href = 'instagram://extbrowser/?url=' + encodeURIComponent('https://apps.apple.com/app/id6789999154');
+          // Fallback if scheme doesn't work
+          setTimeout(function() { inappMsg.classList.remove('hidden'); }, 500);
+        } else if (isInAppBrowser) {
           inappMsg.classList.remove('hidden');
         } else {
           window.location.href = appleBtn.href;
         }
       } else if (isAndroid) {
         appleBtn.classList.add('hidden');
-        if (isInAppBrowser) {
+        if (isInstagram) {
+          window.location.href = 'instagram://extbrowser/?url=' + encodeURIComponent('https://play.google.com/apps/testing/com.anhadgurbani.app');
+          setTimeout(function() { inappMsg.classList.remove('hidden'); }, 500);
+        } else if (isInAppBrowser) {
           inappMsg.classList.remove('hidden');
         }
       }
