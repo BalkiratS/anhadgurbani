@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anhad Gurbani</title>
+  <meta name="description" content="A peaceful Gurbani experience for daily Sehaj Path and Nitnem.">
+  <meta property="og:title" content="Anhad Gurbani">
+  <meta property="og:description" content="A peaceful Gurbani experience for daily Sehaj Path and Nitnem.">
+  <meta property="og:type" content="website">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 28px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      transition: opacity 0.2s;
+    }
+
+    .btn:active {
+      opacity: 0.8;
+    }
+
+    .btn-apple {
+      background: #fff;
+      color: #000;
+    }
+
+    .btn-google {
+      background: #fff;
+      color: #000;
+    }
+
+    .btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .android-steps {
+      text-align: left;
+      margin-bottom: 20px;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .android-steps p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-num {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+    }
+
+    .step-text a {
+      color: #FFC107;
+      text-decoration: none;
+    }
+
+    .redirecting {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="homescreen_logo.png" alt="Anhad Gurbani" class="logo">
+    <h1>Anhad Gurbani</h1>
+    <p class="subtitle">A peaceful Gurbani experience for daily Sehaj Path and Nitnem</p>
+
+    <div id="buttons">
+      <a id="apple-btn" class="btn btn-apple" href="https://apps.apple.com/app/id6789999154">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+        </svg>
+        App Store
+      </a>
+
+      <div id="android-section">
+        <div class="android-steps">
+          <p>Android (Early Access)</p>
+          <div class="step">
+            <span class="step-num">1</span>
+            <span class="step-text"><a href="https://groups.google.com/g/anhadgurbani-closed-testing"
+                target="_blank">Join the test group</a> and tap "Join Group"</span>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <span class="step-text">Then download from the Play Store below</span>
+          </div>
+        </div>
+        <a id="google-btn" class="btn btn-google" href="https://play.google.com/apps/testing/com.anhadgurbani.app">
+          <img src="google_play_logo.png" alt="Google Play" style="height:24px;">
+          Google Play (Early Access)
+        </a>
+      </div>
+    </div>
+    <p id="redirect-msg" class="redirecting hidden">Redirecting you to the store...</p>
+  </div>
+
+  <script>
+    (function () {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /android/i.test(ua);
+
+      var appleBtn = document.getElementById('apple-btn');
+      var googleBtn = document.getElementById('google-btn');
+      var msg = document.getElementById('redirect-msg');
+
+      if (isIOS) {
+        document.getElementById('android-section').classList.add('hidden');
+        msg.classList.remove('hidden');
+        setTimeout(function () { window.location.href = appleBtn.href; }, 1500);
+      } else if (isAndroid) {
+        appleBtn.classList.add('hidden');
+      }
+    })();
+  </script>
+</body>
+
+</html>
